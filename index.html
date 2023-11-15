@@ -20,17 +20,17 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="todo" class="form-label"></label>
-                        <input type="text" class="form-control" id="todo" >
-                      </div>
-                      
+                        <input type="text" class="form-control" id="todo" v-model="newTodo" @keyup.enter="addTodo">
+                    </div>
+                    <button class="btn btn-primary" @click="addTodo">Aggiungi</button>
                 </div>
             </div>
             <hr>
 
             <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <p>TESTO</p>
-                    <p class="ms_cancel">X</p>
+                <li v-for="(item, index) in todoList" :key="index" class="list-group-item d-flex justify-content-between align-items-center">
+                    <p>{{ item }}</p>
+                    <p class="ms_cancel" @click="removeTodo(index)">X</p>
                 </li>
             </ul>
         </div>
