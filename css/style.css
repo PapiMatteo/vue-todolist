@@ -3,4 +3,24 @@
     padding: 0 .5rem;
     border: 1px solid rgba(0, 0, 0, 0.315);
     border-radius: 5px;
+    background-color: white;
+}
+
+.ms_done {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.ms_text-done {
+    text-decoration: line-through;
+}
+
+.ms_small-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.ms_li {
+    padding-top: 20px;
+    font-size: 1.2rem;
 }
