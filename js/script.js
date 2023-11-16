@@ -21,15 +21,15 @@ createApp({
 
         },
         removeTodo: function(todoIndex) {
-
+            console.log("removetodo");
             this.todoList.splice(todoIndex, 1);
 
         },
         setDone: function(todoIndex) {
-
-            if(!this.todoList.length === 0){
-                this.todoList[todoIndex].done = !this.todoList[todoIndex].done;
-            }
+            
+            console.log("setdone")
+            this.todoList[todoIndex].done = !this.todoList[todoIndex].done;
+            
             
         }
 
