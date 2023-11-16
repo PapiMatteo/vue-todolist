@@ -12,7 +12,7 @@ createApp({
     },
     methods: {
         addTodo: function() {
-            this.newTodo.text.trim()
+            
             if(!this.newTodo.text == ""){
                 
                 this.todoList.push({...this.newTodo});
