@@ -12,9 +12,12 @@ createApp({
     },
     methods: {
         addTodo: function() {
-
-            this.todoList.push({...this.newTodo});
-            this.newTodo.text = "";
+            this.newTodo.text.trim()
+            if(!this.newTodo.text == ""){
+                
+                this.todoList.push({...this.newTodo});
+                this.newTodo.text = "";
+            }          
 
         },
         removeTodo: function(todoIndex) {
@@ -24,8 +27,10 @@ createApp({
         },
         setDone: function(todoIndex) {
 
-            this.todoList[todoIndex].done = !this.todoList[todoIndex].done;
-
+            if(!this.todoList.length === 0){
+                this.todoList[todoIndex].done = !this.todoList[todoIndex].done;
+            }
+            
         }
 
     }
